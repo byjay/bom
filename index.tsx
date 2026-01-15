@@ -40,18 +40,30 @@ const GROUP_OPTIONS = [
   { id: 'Grade', label: 'Grade' },
 ];
 
-// --- Default Data for Demo ---
+// --- Default Data from Real Excel Files (bom (1).xlsx + bom (2).xlsx) ---
 const DEFAULT_WELD_DATA = [
-  { "FILENAME": "Structure_A1.xlsx", "BLOCK": "A1", "MOD": "SA01", "WELD UNIQUE ID": "A1_SA01_001_01", "MATNO1": "A1-SA01-001", "WELD. LENG.": 12160 },
-  { "FILENAME": "Structure_A1.xlsx", "BLOCK": "A1", "MOD": "SA01", "WELD UNIQUE ID": "A1_SA01_002_02", "MATNO1": "A1-SA01-002", "WELD. LENG.": 5000 },
-  { "FILENAME": "Structure_A1.xlsx", "BLOCK": "A1", "MOD": "SA01", "WELD UNIQUE ID": "A1_SA01_002_02", "MATNO1": "A1-SA01-010", "WELD. LENG.": 5000 },
-  { "FILENAME": "Structure_A1.xlsx", "BLOCK": "A1", "MOD": "SA01", "WELD UNIQUE ID": "A1_SA01_008_10", "MATNO1": "A1-SA01-008", "WELD. LENG.": 2500 },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "A1", "WELD UNIQUE ID": "A1_SA01_001_01", "MATNO1": "A1-SA01-001", "": "A1-SA01-001" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_001_01", "MATNO1": "A1-SA01-010", "": "A1-SA01-010" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_001_01", "MATNO1": "A1-SA01-011", "": "A1-SA01-011" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_001_01", "MATNO1": "A1-SA01-012", "": "A1-SA01-012" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_001_01", "MATNO1": "A1-SA01-013", "": "A1-SA01-013" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_002_02", "MATNO1": "A1-SA01-002", "": "A1-SA01-002" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_002_02", "MATNO1": "A1-SA01-010", "": "A1-SA01-010" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_002_02", "MATNO1": "A1-SA01-011", "": "A1-SA01-011" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_002_02", "MATNO1": "A1-SA01-012", "": "A1-SA01-012" },
+  { "FILENAME": "bom (2).xlsx", "행 레이블": "", "WELD UNIQUE ID": "A1_SA01_002_02", "MATNO1": "A1-SA01-013", "": "A1-SA01-013" }
 ];
 const DEFAULT_MAT_DATA = [
-  { "FILENAME": "Material_Ref.xlsx", "MATNO": "A1-SA01-001", "STEEL NO": "FC89439801", "NESTING DWG": "BA21-72", "Grade": "S420MLO", "WEIGHT": 1111.1, "ea": 1 },
-  { "FILENAME": "Material_Ref.xlsx", "MATNO": "A1-SA01-002", "STEEL NO": "FC89026801", "NESTING DWG": "BA21-23", "Grade": "S420M", "WEIGHT": 1389, "ea": 2 },
-  { "FILENAME": "Material_Ref.xlsx", "MATNO": "A1-SA01-010", "STEEL NO": "FC89119501", "NESTING DWG": "BA21-15", "Grade": "S420M", "WEIGHT": 9419.7, "ea": 1 },
-  { "FILENAME": "Material_Ref.xlsx", "MATNO": "A1-SA01-008", "STEEL NO": "FD35919901", "NESTING DWG": "BA21-03", "Grade": "S420M", "WEIGHT": 776.7, "ea": 3 },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-001", "STEEL NO": "FC89439801", "NESTING DWG": "BA21-A1A2CNX72", "ea": "1", "total": "1", "MIX": "단독", "no": "", "Grade": "S420MLO", "T": "80", "B": "1120", "L(OD)": "1920", "WEIGHT": "1111.1", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-002", "STEEL NO": "FC89026801", "NESTING DWG": "BA21-A1A2CNX23", "ea": "2", "total": "2", "MIX": "단독", "no": "a b", "Grade": "S420M+OPT30", "T": "50", "B": "1120", "L(OD)": "1920", "WEIGHT": "1389", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-003", "STEEL NO": "FC89037801", "NESTING DWG": "BA21-A1A2CNX25", "ea": "2", "total": "2", "MIX": "단독", "no": "a b", "Grade": "S420M+OPT30", "T": "50", "B": "1080", "L(OD)": "1880", "WEIGHT": "1294.8", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-004", "STEEL NO": "FD35919801", "NESTING DWG": "BA21-A1A2CNX02", "ea": "3", "total": "3", "MIX": "단독", "no": "a b c", "Grade": "S420M", "T": "20", "B": "375", "L(OD)": "1917", "WEIGHT": "338.4", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-005", "STEEL NO": "FD35919901", "NESTING DWG": "BA21-A1A2CNX03", "ea": "3", "total": "3", "MIX": "단독", "no": "a b c", "Grade": "S420M", "T": "20", "B": "1120", "L(OD)": "1920", "WEIGHT": "833.4", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-006", "STEEL NO": "FD35919801", "NESTING DWG": "BA21-A1A2CNX02", "ea": "3", "total": "3", "MIX": "단독", "no": "a b c", "Grade": "S420M", "T": "20", "B": "375", "L(OD)": "1917", "WEIGHT": "338.4", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-007", "STEEL NO": "FD35919801", "NESTING DWG": "BA21-A1A2CNX02", "ea": "3", "total": "3", "MIX": "단독", "no": "a b c", "Grade": "S420M", "T": "20", "B": "375", "L(OD)": "1877", "WEIGHT": "330.9", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-008", "STEEL NO": "FD35919901", "NESTING DWG": "BA21-A1A2CNX03", "ea": "3", "total": "3", "MIX": "단독", "no": "a b c", "Grade": "S420M", "T": "20", "B": "1080", "L(OD)": "1880", "WEIGHT": "776.7", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-009", "STEEL NO": "FD35919801", "NESTING DWG": "BA21-A1A2CNX02", "ea": "3", "total": "3", "MIX": "단독", "no": "a b c", "Grade": "S420M", "T": "20", "B": "375", "L(OD)": "1877", "WEIGHT": "330.9", "TPYE": "PLATE" },
+  { "FILENAME": "bom (1).xlsx", "BLOCK": "A1", "MOD": "SA01", "MATNO": "A1-SA01-010", "STEEL NO": "FC89119501", "NESTING DWG": "BA21-A1A2CNX15", "ea": "1", "total": "1", "MIX": "단독", "no": "", "Grade": "S420M+Z35+OPT30", "T": "40", "B": "2000", "L(OD)": "14999.5", "WEIGHT": "9419.7", "TPYE": "PLATE" }
 ];
 
 const App = () => {
